@@ -1,16 +1,12 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@mysten/sui.js':
     specifier: ^0.49.1
     version: 0.49.1
   '@razorlabs/wallet-kit':
-    specifier: ^0.1.0
-    version: 0.1.0(@types/react-dom@18.2.18)(@types/react@18.2.47)
+    specifier: ^0.1.1
+    version: 0.1.1(@types/react-dom@18.2.18)(@types/react@18.2.47)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -916,8 +912,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@razorlabs/wallet-kit@0.1.0(@types/react-dom@18.2.18)(@types/react@18.2.47):
-    resolution: {integrity: sha512-Y5b8qzW9HkwE+Ttf3arEWEdBgYTSQwUnHAhgdirPz8w7JXQ3IKPMHDnMEtUzx5pjL/Z9+9gtKllQjQME8Prjaw==}
+  /@razorlabs/wallet-kit@0.1.1(@types/react-dom@18.2.18)(@types/react@18.2.47):
+    resolution: {integrity: sha512-M4VrATvHOctDfXVByWAsKO1mxunu6qUsgNuUumqc7IimZC8w8A02Uro7zJvD1+FVAo1MzBu/ZPUtUgyeCoQJ9g==}
     dependencies:
       '@mysten/sui.js': 0.49.1
       '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)
@@ -2549,3 +2545,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
