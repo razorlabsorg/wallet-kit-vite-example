@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+.page-button {
+  border-radius: 16px;
+  width: 284px;
+  padding: 14px 16px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Satoshi', sans-serif;
+  line-height: 17px;
+  cursor: pointer;
+  border: 0;
+
+  & {
+    background-color: hsl(48, 100%, 54%);
+  }
+
+  &:hover {
+    background-color: hsl(48, 100%, 45%);
+  }
+
+  &:active {
+    background-color: hsl(48, 100%, 37%);
+  }
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
