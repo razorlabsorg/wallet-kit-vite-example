@@ -5,30 +5,30 @@ import {
   SuiConnectButton,
   useSuiAccountBalance,
   useSuiWallet,
-  SuiChainId,
+  // SuiChainId,
   ErrorCode,
   formatSUI,
 } from "@razorlabs/wallet-kit";
 import "@razorlabs/wallet-kit/style.css";
-import { TransactionBlock } from "@mysten/sui.js/transactions";
-import { useMemo } from "react";
+// import { TransactionBlock } from "@mysten/sui.js/transactions";
+// import { useMemo } from "react";
 
-type StringOrNumber = string | number;
+// type StringOrNumber = string | number;
 
-const sampleNft = new Map<StringOrNumber, string>([
+/* const sampleNft = new Map<StringOrNumber, string>([
   [
     "movement:m2:devnet",
     "0x2f60e33e33a1c880e8749073c5ef89288cf4df8974d8b872dfd72bc6c58f1172::nft::mint",
   ],
-]);
+]); */
 
 function Sui() {
   const wallet = useSuiWallet();
   const { balance } = useSuiAccountBalance();
-  const nftContractAddr = useMemo(() => {
+  /* const nftContractAddr = useMemo(() => {
     if (!wallet.chain) return "";
     return sampleNft.get(wallet.chain.id) ?? "";
-  }, [wallet]);
+  }, [wallet]); */
 
   function uint8arrayToHex(value: Uint8Array | undefined) {
     if (!value) return "";
@@ -37,7 +37,7 @@ function Sui() {
     return value.toString("hex");
   }
 
-  async function handleExecuteMoveCall(target: string | undefined) {
+  /* async function handleExecuteMoveCall(target: string | undefined) {
     if (!target) return;
 
     try {
@@ -61,7 +61,7 @@ function Sui() {
       console.error("executeMoveCall failed", e);
       alert("executeMoveCall failed (see response in the console)");
     }
-  }
+  } */
 
   async function handleSignMsg() {
     if (!wallet.account) return;
@@ -87,7 +87,7 @@ function Sui() {
     }
   }
 
-  const chainName = (chainId: StringOrNumber | undefined) => {
+  /* const chainName = (chainId: StringOrNumber | undefined) => {
     switch (chainId) {
       case SuiChainId.MAIN_NET:
         return "M2 Mainnet";
@@ -98,7 +98,7 @@ function Sui() {
       default:
         return "Unknown";
     }
-  };
+  }; */
 
   return (
     <div className="App">
@@ -152,11 +152,11 @@ function Sui() {
               </p>
             </div>
             <div className={"btn-group"} style={{ margin: "8px 0" }}>
-              {nftContractAddr && (
+              {/* {nftContractAddr && (
                 <button onClick={() => handleExecuteMoveCall(nftContractAddr)}>
                   Mint {chainName(wallet.chain?.id)} NFT
                 </button>
-              )}
+              )} */}
               <button onClick={handleSignMsg}>signMessage</button>
             </div>
           </div>
