@@ -6,7 +6,7 @@ import {
   useAptosAccountBalance,
   useAptosWallet,
   ErrorCode,
-  formatSUI,
+  formatCurrency,
 } from "@razorlabs/wallet-kit";
 import "@razorlabs/wallet-kit/style.css";
 
@@ -85,8 +85,9 @@ function App() {
               <p>current network: {wallet.chain?.name}</p>
               <p>
                 wallet balance:{" "}
-                {formatSUI(balance ?? 0, {
+                {formatCurrency(balance ?? 0, {
                   withAbbr: false,
+                  decimals: 8,
                 })}{" "}
                 MOVE
               </p>
