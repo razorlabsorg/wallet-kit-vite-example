@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@mysten/sui.js": "^0.54.1",
-    "@razorlabs/wallet-kit": "^0.2.3",
+    "@razorlabs/wallet-kit": "^0.2.6",
     "aptos": "^1.21.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
