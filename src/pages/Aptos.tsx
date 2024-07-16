@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import razorLogo from '../assets/logo.png';
 import "../App.css";
@@ -55,17 +56,29 @@ function App() {
       </div>
       <h1>Vite + Razor Kit</h1>
       <div className="card">
-        <AptosConnectButton className='page-button'
-          onConnectError={(error: any) => {
-            if (error.code === ErrorCode.WALLET__CONNECT_ERROR__USER_REJECTED) {
-              console.warn(
-                "user rejected the connection to " + error.details?.wallet
-              );
-            } else {
-              console.warn("unknown connect error: ", error);
-            }
-          }}
-        />
+      <AptosConnectButton
+        className={'aaa'}
+        style={{ marginTop: '16px' }}
+        onConnectSuccess={(name) => {
+          console.log('connect success: ', name);
+        }}
+        onConnectError={(err) => {
+          //@ts-ignore
+          if (err.code === ErrorCode.WALLET__CONNECT_ERROR__USER_REJECTED) {
+            console.warn(
+              'user rejected the connection to ' + err.details?.wallet,
+            );
+          } else {
+            console.warn('unknown connect error: ', err);
+          }
+        }}
+        onDisconnectSuccess={(name) => {
+          console.log('disconnect success: ', name);
+        }}
+        onDisconnectError={(err) => {
+          console.log('disconnect error: ', err);
+        }}
+      />
 
         {!wallet.connected ? (
           <p>Connect DApp with Razor wallet from now!</p>
